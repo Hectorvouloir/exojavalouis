@@ -1,5 +1,5 @@
 
-public class Chat extends Animal{
+public class Chat extends Animal implements Carnivore{
     private String pelage;
 
     public Chat (String nom, String pelage)
@@ -13,4 +13,13 @@ public class Chat extends Animal{
         System.out.println("chasse");
     }
 
+    @Override
+    public void manger(Herbivore h) {
+        System.out.println(getNom()+" mange "+ h.getNom());
+    }
+
+    @Override
+    public String getAttribut() {
+        return pelage;
+    }
 }

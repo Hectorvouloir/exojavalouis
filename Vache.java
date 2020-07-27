@@ -1,4 +1,4 @@
-public class Vache extends Animal
+public class Vache extends Animal implements Herbivore
 {
     private String sabot;
 
@@ -13,4 +13,13 @@ public class Vache extends Animal
         System.out.println("Copuler avec Merlin");
     }
 
+    @Override
+    public void etremange(Carnivore c) {
+        System.out.println(getNom()+" est mangé par"+ c.getNom());
+    }
+
+    @Override
+    public String getAttribut() {
+        return sabot;
+    }
 }

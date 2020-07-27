@@ -1,4 +1,4 @@
-public class Animal{
+public abstract class Animal{
     private String type;
     private String nom;
     private String cri;
@@ -11,5 +11,11 @@ public class Animal{
         this.nom=nom;
         this.cri=cri;
     }
+
+    public String getNom(){
+        return(this.nom);
+    }
+
+    public abstract String getAttribut();
 }
 
